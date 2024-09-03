@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Activities</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="events.html" id="create-event-button">Create Event</a></li>
+                <li><a href="events.html">My Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="event-list">
+            <h2>Event List</h2>
+            <ul id="event-list-ul">
+                <!-- Event list will be displayed here -->
+            </ul>
+        </section>
+    
+        <section id="create-event">
+            <h2>Create Event</h2>
+            <form id="create-event-form">
+                <label for="event-type">Event Type:</label>
+                <select id="event-type" name="event-type">
+                    <option value="in-person">In person</option>
+                    <option value="online">Online</option>
+                </select><br><br>
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" name="event-name"><br><br>
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event-date"><br><br>
+                <label for="event-time">Event Time:</label>
+                <input type="time" id="event-time" name="event-time"><br><br>
+                <label for="event-description">Event Description:</label>
+                <textarea id="event-description" name="event-description"></textarea><br><br>
+                <label for="event-privacy">Event Privacy:</label>
+                <select id="event-privacy" name="event-privacy">
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </select><br><br>
+                <button type="submit">Create Event</button>
+            </form>
+        </section>
+    </main>
+    <script src="events.js"></script>
+</body>
+</html>

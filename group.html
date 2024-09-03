@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups and Networks - Campus Connect</title>
+    <link rel="stylesheet" href="groups.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Groups and Networks Section -->
+    <section class="groups">
+        <h1>Groups and Networks</h1>
+        <p>Connect with various communities, join groups, and engage in collaborative discussions</p>
+
+        <!-- Create Group Form -->
+        <div class="create-group">
+            <h2>Create a New Group</h2>
+            <form id="create-group-form">
+                <div class="form-group">
+                    <label for="groupName">Group Name:</label>
+                    <input type="text" id="groupName" name="groupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="groupDescription">Group Description:</label>
+                    <textarea id="groupDescription" name="groupDescription"></textarea>
+                </div>
+                <button type="submit">Create Group</button>
+            </form>
+        </div>
+
+        <!-- List of Groups -->
+        <div class="groups-list">
+            <h2>Available Groups</h2>
+            <ul id="groups-list">
+                <!-- List of groups will be displayed here -->
+            </ul>
+        </div>
+
+        <!-- Joined Groups -->
+        <div class="joined-groups">
+            <h2>My Groups</h2>
+            <ul id="joined-groups">
+                <!-- List of joined groups will be displayed here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Campus Connect. All rights reserved.</p>
+    </footer>
+
+    <script src="group.js"></script>
+</body>
+</html>

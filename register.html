@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect-Sign up</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create a new account</h2>
+        <p>It's quick and easy.</p>
+        <form action="home.html" id="register-form">
+            <label for="firstName">First Name:</label>
+            <input type="text" placeholder="First Name" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" placeholder="Last Name" id="lastName" name="lastName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" placeholder="Email Address" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Password" id="password" name="password" required>
+
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" placeholder="Confirm Password" id="confirmpassword" name="confirmpassword" required>
+
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <input type="submit" value="Sign up" id="submit-btn">
+        </form>
+        <div id="error-message"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('register-form');
+        const emailInput = document.getElementById('email');
+        const dobInput = document.getElementById('dob');
+        const submitBtn = document.getElementById('submit-btn');
+        const errorMessageDiv = document.getElementById('error-message');
+
+        submitBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = emailInput.value;
+            const dob = new Date(dobInput.value);
+            const today = new Date();
+            const age = today.getFullYear() - dob.getFullYear();
+            const m = today.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            // Check if email is in correct format
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                errorMessageDiv.innerHTML = 'Please enter a valid email address.';
+                return;
+            }
+
+            // Check if user is at least 18 years old
+            if (age < 18) {
+                errorMessageDiv.innerHTML = 'You must be at least 18 years old to sign up.';
+                return;
+            }
+
+            // If both checks pass, submit the form
+            form.submit();
+        });
+    </script>
+</body>
+</html>

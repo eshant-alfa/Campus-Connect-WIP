@@ -1,0 +1,119 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    background-image: url('login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border: 0px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  /* Form Container Styles */
+  
+  .form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ddebf1;
+    border: 1px solid #d3e7f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+      
+  }
+  
+  /* Form Header Styles */
+  
+  h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Form Field Styles */
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="confirmpassword"],
+  input[type="date"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="confirmpassword"]:focus,
+  input[type="date"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Submit Button Styles */
+  
+  input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Error Message Styles */
+  
+  .error-message {
+    color: "red";
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 600px) {
+    .form-container {
+      margin: 20px auto;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .form-container {
+      margin: 10px auto;
+    }
+  }
